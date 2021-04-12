@@ -8,7 +8,9 @@ var usocket = []; //全局变量
 io.on('connection', function(socket){
     console.log('a user connected');
 
-      //监听join事件
+    io.emit("yoho","gaga");
+
+    //监听join事件
     socket.on("join", function (name) {
         usocket[name] = socket
         socket.name = name;
